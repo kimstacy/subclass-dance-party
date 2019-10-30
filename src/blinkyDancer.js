@@ -1,14 +1,20 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+var EarthDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
+  Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('blinky-dancer');
+  this.$node.append($('<img src="./img/earth.gif">'));
+
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
-makeBlinkyDancer.prototype.oldStep = makeBlinkyDancer.prototype.step;
+EarthDancer.prototype = Object.create(Dancer.prototype);
 
-makeBlinkyDancer.prototype.step = function() {
-  this.oldStep();
-  // makeBlinkyDancer.prototype.step.call(this);
+EarthDancer.prototype.constructor = EarthDancer;
+
+EarthDancer.prototype.oldStep = EarthDancer.prototype.step;
+
+EarthDancer.prototype.step = function() {
+  // this.oldStep();
+  // EarthDancer.prototype.step.call(this);
   this.$node.toggle();
 };
 

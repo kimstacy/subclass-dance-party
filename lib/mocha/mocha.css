@@ -3,6 +3,11 @@
 body {
   font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 60px 50px;
+  background-color: #252525;
+  color: white;
+  font-size: 18px;
+  font-family: "Operator Mono Lig", Times, serif;
+  font-style: italic;
 }
 
 #mocha ul, #mocha li {
@@ -20,7 +25,7 @@ body {
 
 #mocha h1 {
   margin-top: 15px;
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 200;
 }
 
@@ -35,7 +40,8 @@ body {
 
 #mocha .suite .suite h1 {
   margin-top: 0;
-  font-size: .8em;
+  font-size: 22px;
+  text-decoration: underline
 }
 
 .hidden {
@@ -43,13 +49,14 @@ body {
 }
 
 #mocha h2 {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: normal;
   cursor: pointer;
 }
 
 #mocha .suite {
   margin-left: 15px;
+  margin-bottom: 25px;
 }
 
 #mocha .test {
@@ -72,7 +79,7 @@ body {
 
 #mocha .test.pass::before {
   content: '✓';
-  font-size: 12px;
+  font-size: 16px;
   display: block;
   float: left;
   margin-right: 5px;
@@ -108,33 +115,34 @@ body {
 }
 
 #mocha .test.fail {
-  color: #c00;
+  color: rgb(180, 66, 66);
 }
 
 #mocha .test.fail pre {
-  color: black;
+  color: white;
 }
 
 #mocha .test.fail::before {
   content: '✖';
-  font-size: 12px;
+  font-size: 16px;
   display: block;
   float: left;
   margin-right: 5px;
-  color: #c00;
+  color: rgb(180, 66, 66);
 }
 
 #mocha .test pre.error {
-  color: #c00;
+  font-size:  14px;
+  color: rgb(180, 66, 66);
   max-height: 300px;
   overflow: auto;
 }
 
 #mocha .test pre {
+  font-size: 14px;
   display: block;
   float: left;
   clear: left;
-  font: 12px/1.5 monaco, monospace;
   margin: 5px;
   padding: 15px;
   border: 1px solid #eee;
@@ -184,7 +192,7 @@ body {
 }
 
 #mocha-error {
-  color: #c00;
+  color: rgb(180, 66, 66);
   font-size: 1.5  em;
   font-weight: 100;
   letter-spacing: 1px;
@@ -194,7 +202,7 @@ body {
   position: fixed;
   top: 15px;
   right: 10px;
-  font-size: 12px;
+  font-size: 16px;
   margin: 0;
   color: #888;
 }
@@ -205,7 +213,7 @@ body {
 }
 
 #mocha-stats em {
-  color: black;
+  color: white;
 }
 
 #mocha-stats a {
@@ -222,11 +230,6 @@ body {
   margin: 0 5px;
   list-style: none;
   padding-top: 11px;
-}
-
-#mocha-stats canvas {
-  width: 40px;
-  height: 40px;
 }
 
 code .comment { color: #ddd }

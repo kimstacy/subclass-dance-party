@@ -1,27 +1,167 @@
-body, html{
-  height:100%;
+body, html {
+  /* max-height:95vh;
+  max-width: 100vw; */
+  font-family: Arial;
 }
-body{
+.title {
+  color: white;
+  border: none;
+  /* background-color: white; */
+  font-weight: 900;
+  font-size: 58px;
+  letter-spacing: 1.8px;
+  border-radius: 50px;
+  padding: 40px;
+  /* box-shadow: 0 0 20px #0000ff inset; */
+}
+.titleBar {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 40px;
+}
+.topbar {
+  margin-top: 20px;
+  height:100px;
+  /* background-color: beige; */
+  display: flex;
+  justify-content: center;
+}
+.main {
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  top: 300px;
+  left: 5%;
+}
+.board {
+  position: absolute;
+  width: 85%;
+  height: 65%;
+  margin-bottom: 10%;
+}
+button {
+  border-radius: 14px;
+  font-size: 20px;
+  padding:6px 14px;
+  margin: 25px;
+	border:1px solid #eeb44f;
+
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #ff0000 100%);
+	background-color:#ffc477;
+
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-weight:bold;
+
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffd792;
+}
+/* button:hover {
+  background-color: blue;
+} */
+button:focus {
+  outline: none;
+  border: none;
+}
+body {
+  margin: 0;
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
+  font-family: Arial;
+  background-image: url('img/space.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
-body, a:link, a:visited, a:active{
-  color: lightblue;
+body, a:link, a:visited, a:active {
+  color: black;
 }
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+.line-up {
+
 }
-.topbar{
-  height:32px;
-  background-color: #555;
+
+/* .addDancerButton {
+  float: left;
+} */
+
+.addDancerButton {
+  float: left;
 }
-.title{
-  background-color: #777;
+.addDancerButton:hover {
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	background-color:#fb9e25;
 }
-.dancer{
-  border:10px solid red;
+.addDancerButton:active {
+	position:relative;
+	top:1px;
+}
+.dancer {
+  /* border:25px solid red; */
+  /* background-image: url('img/earth.gif'); */
   border-radius:10px;
   position:absolute;
+}
+.dancer:hover {
+  box-shadow: 0 0 20px #ffffff inset;
+  /* padding: 25px; */
+}
+.blob-dancer {
+  border: none;
+  animation: change-size 3s infinite;
+
+}
+
+
+/* #blobButton {
+  background-image: url('img/blob.gif');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+} */
+
+.blob-container {
+  position: absolute;
+}
+
+
+@keyframes change-size {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
+
+
+}
+
+
+
+@keyframes float {
+  0% { left: 0; }
+  /* 50% { left: 40%; } */
+  100% { left: 100%; }
+
+
+
+}
+
+.rocket-dancer {
+  position: relative;
+  animation: float 4s infinite;
+
+}
+
+
+
+
+
+.mecha-dancer {
+
 }

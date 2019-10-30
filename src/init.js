@@ -14,7 +14,6 @@
 
 $(document).ready(function() {
   window.dancers = [];
-
   $('.addDancerButton').on('click', function(event) {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
@@ -23,11 +22,20 @@ $(document).ready(function() {
 
     // Make a dancer with a random position
     var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
+      $('.main').height() * Math.random(),
+      $('.main').width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+    $('.main').append(dancer.$node);
   });
+
+  $('.line-up').on('click', function(event) {
+    lineUp();
+  });
+  $('#dancer').on('click', function(event) {
+    console.log(event);
+    hideElement(event.target);
+  });
+
 });
 

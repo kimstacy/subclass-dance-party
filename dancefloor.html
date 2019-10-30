@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Object Dance Party</title>
+    <title>ASTRAL FLOOR</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
+    <script src="src/blobDancer.js"></script>
+    <script src="src/rocket.js"></script>
+    <script src="src/alien.js"></script>
+    <script src="src/mechaDancer.js"></script>
+    <script src="src/actions.js"></script>
   </head>
   <body>
+    <div class="titleBar"><span class='title'>ASTRAL FLOOR</div>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
+      <!-- <a href="#" class="    " data-dancer-maker-function-name="  ">Line up all dancers</a> -->
+      <button class="addDancerButton" data-dancer-maker-function-name="BlobDancer">Blob</button>
+      <button href="#" class="addDancerButton" data-dancer-maker-function-name="RocketDancer">Rocket</button>
+      <button href="#" class="addDancerButton" data-dancer-maker-function-name="Alien">Alien</button>
+      <button href="#" class="addDancerButton" data-dancer-maker-function-name="MechaDancer">Mecha</button>
+      <button href="#" class="addDancerButton" data-dancer-maker-function-name="EarthDancer">Earth</button>
+      <button href="#" class="line-up">Line Up</button>
+
+
     </div>
+    <div class='main'></div>
+
     <script src="src/init.js"></script>
   </body>
 </html>
